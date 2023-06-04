@@ -1,24 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import mImg from "./images/illustration-sign-up-mobile.svg";
+import dImg from "./images/illustration-sign-up-desktop.svg";
+import list from "./images/icon-list.svg";
+import Form from "./Form";
+import { useState } from "react";
+import Success from "./pages/Success";
 
 function App() {
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [email, setEmail] = useState("");
+
+  const handleFormSubmit = (submittedEmail) => {
+    setEmail(submittedEmail);
+    setShowSuccess(true);
+  };
+
+  const handleDismiss = () => {
+    setShowSuccess(false);
+    setEmail("");
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {!showSuccess ? (
+        <div className="container">
+          <div>
+            <img src={window.innerWidth > 900 ? dImg : mImg} alt="" />
+          </div>
+          <div className="subscribe">
+            <h1>Stay updated!</h1>
+            <p>Join 60, 000+ product managers receiving monthly updates on:</p>
+            <div className="list">
+              <img src={list} alt="" />
+              <span>Product discovery and building what matters</span>
+            </div>
+            <div className="list">
+              <img src={list} alt="" />
+              <span>Measuring to ensure updates are a success</span>
+            </div>
+            <div className="list">
+              <img src={list} alt="" />
+              <span>And much more!</span>
+            </div>
+            <Form onSubmit={handleFormSubmit} />
+          </div>
+        </div>
+      ) : (
+        <Success email={email} onDismiss={handleDismiss} />
+      )}
+    </>
   );
 }
 

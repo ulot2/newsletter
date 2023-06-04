@@ -1,13 +1,186 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container > div:first-of-type img {
+  width: 100%;
+}
+
+.subscribe {
+  margin: 1.2rem 3rem;
+}
+
+.subscribe h1 {
+  color: #242742;
+  font-weight: 700;
+}
+
+.subscribe p {
+  font-size: 16px;
+  margin: 1.5rem 0;
+  font-weight: 400;
+  color: #36384e;
+}
+
+.list {
+  margin: 1rem 0;
+}
+
+.list > span {
+  position: absolute;
+  margin-left: 15px;
+  margin-top: 2px;
+  font-size: 16px;
+  color: #36384e;
+}
+
+form {
+  margin-top: 2rem;
+}
+
+span.error {
+  color: red;
+  font-size: 13px;
+  font-weight: 700;
+  float: right;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #242742;
+}
+
+form input {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 3em;
+  border: 1px solid #e3e4ec;
+  margin: 0.5rem 0;
+  padding-left: 20px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.error-input {
+  border: 1px solid red;
+  background-color: rgb(236, 197, 197);
+}
+
+.btn {
+  cursor: pointer;
+  width: 100%;
+  height: 3em;
+  margin-top: 1em;
+  border: none;
+  background-color: #242742;
+  color: #fff;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.btn:hover {
+  background-image: linear-gradient(to right, #ff3e83, #ff6257);
+}
+/* SUCESS PAGE */
+.success {
+  padding: 10rem 3rem 0 3rem;
+}
+
+.success h1 {
+  padding-top: 2rem;
+  font-size: 30pt;
+  color: #242742;
+}
+
+.success p {
+  padding-top: 1.4rem;
+  color: #36384e;
+}
+
+.success p span {
+  font-weight: 700;
+}
+
+.dismiss-btn {
+  margin-top: 16rem;
+}
+
+/* TABLET MODE */
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: #242742;
+  }
+  .container {
+    background-color: #fff;
+    min-height: 79vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem auto;
+    max-width: 80%;
+    min-width: 90%;
+    border-radius: 20px;
+    padding-right: 1.5rem;
+  }
+  .main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .success {
+    background-color: #fff;
+    padding: 2rem;
+    max-width: 35%;
+    border-radius: 20px;
+  }
+
+  .success img {
+    width: 50px;
+  }
+
+  .success p {
+    margin-bottom: 1rem;
+  }
+
+  .dismiss-btn {
+    margin-top: 0rem;
+    border-radius: 5px;
+  }
+}
+
+/* DESKTOP MODE */
+@media only screen and (min-width: 1000px) {
+  body {
+    background-color: #242742;
+  }
+  .container {
+    background-color: #fff;
+    min-height: 79vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 60%;
+    max-width: 70%;
+    border-radius: 20px;
+    padding-right: 1.5rem;
+  }
+
+  .success {
+    max-width: 25%;
+  }
 }
