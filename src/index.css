@@ -71,6 +71,10 @@ body {
   margin-top: 20px;
 }
 
+.home div img {
+  width: 80%;
+}
+
 .home div h1,
 p {
   color: #fff;
@@ -159,7 +163,7 @@ form.loginf input {
 }
 
 .subscribe {
-  margin: 0 3rem;
+  margin: 2rem 3rem;
 }
 
 .subscribe h1 {
@@ -169,12 +173,13 @@ form.loginf input {
 
 .subscribe p {
   font-size: 16px;
+  margin-top: 1rem;
   font-weight: 400;
   color: #36384e;
 }
 
 .list {
-  margin: 5px 0;
+  margin: 1.5rem 0;
 }
 
 .list>span {
@@ -239,6 +244,7 @@ form.newsletter input {
 .success {
   padding: 10rem 3rem 0 3rem;
   background-color: #fff;
+  height: 100vh;
 }
 
 .success h1 {
@@ -290,10 +296,10 @@ form.newsletter input {
   }
 
   .success {
-    background-color: #fff;
     padding: 2rem;
     max-width: 35%;
     border-radius: 20px;
+    height: 50vh;
   }
 
   .success img {
