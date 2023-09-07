@@ -26,7 +26,7 @@ export default function Form({ onSubmit }) {
 
   return (
     <main>
-      <form onSubmit={handleSubmit}>
+      <form className="newsletter" onSubmit={handleSubmit}>
         <div>
           <label>Email address</label>
           {error && <span className="error">{error}</span>}
