@@ -243,6 +243,7 @@ form.newsletter input {
 /* SUCESS PAGE */
 .success {
   padding: 10rem 3rem 0 3rem;
+  background-color: #fff;
 }
 
 .success h1 {
